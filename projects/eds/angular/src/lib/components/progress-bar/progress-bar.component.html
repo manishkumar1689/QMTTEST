@@ -1,0 +1,6 @@
+<div [ngClass]="className">
+  <label *ngIf="label">{{label}}</label>
+  <progress *ngIf="buffer" class="buffer" [attr.value]="buffer" [max]="max"></progress>
+  <progress [attr.value]="value !== undefined ? value : null" [max]="max"></progress>
+  <span *ngIf="percentage !== undefined" [innerText]="percentage + '%'"></span>
+</div>

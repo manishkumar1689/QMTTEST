@@ -1,0 +1,18 @@
+<div class="dialog {{mode}}" [ngClass]="{'show': isOpened}">
+  <div class="content" >
+    <div class="top" style="margin-top: -16px;margin-left: -16px;margin-right: -16px;background-color: #0082f0;color: white;height: 40px;">
+      <div class="title" style="padding: 10px;">
+        <ng-content select="eds-dialog-title"></ng-content>
+      </div>
+      <!-- <div class="right" *ngIf="mode === 'fullscreen'" (click)="close()" style="padding: 10px;">
+        <i class="icon icon-cross"></i>
+      </div> -->
+    </div>
+    <div #content *ngIf="contentExists" class="body">
+      <ng-content select="eds-dialog-content"></ng-content>
+    </div>
+    <div #actions *ngIf="actionsExist" class="bottom">
+      <ng-content select="eds-dialog-actions"></ng-content>
+    </div>
+  </div>
+</div>

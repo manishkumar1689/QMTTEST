@@ -1,0 +1,53 @@
+@import (reference) "../common/global";
+
+.table {
+  &.dialogtable {
+	  width: 100%;
+	  border-left: none;
+	  border-right: none;
+	  border-collapse: collapse;
+	  //border-top: 1px solid @table-outer-gray;
+	  text-align: left;
+	  margin-bottom: @space-small;
+		padding-right: 150px;
+		overflow-x: hidden;
+	
+	  th {
+	    //border-bottom: 1px solid @table-outer-gray;
+	    font-weight: @weight-bold;
+	  }
+	
+	  td {
+	    opacity: 1;
+	  }
+	
+	  thead {
+	    font-weight: @weight-bold;
+	  }
+	
+	  tr {
+	    &:last-child td {
+	      border-bottom: 0px solid @table-outer-gray;
+	    }
+	
+	    &:not(:last-child) td {
+	      border-bottom: 0px solid @table-inner-gray;
+	    }
+	
+	    th,
+	    td {
+	      padding: @space-small;
+	    }
+	  }
+	  
+	  &:not(.dashed) {
+	    tbody > tr {
+	      &:hover {
+	        td {
+	          background: @table-hover;
+	        }
+	      }
+	    }
+	  }
+	}
+}

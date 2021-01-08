@@ -1,0 +1,10 @@
+<div class="dropdown" [class.more]="icon">
+  <button eds-button (click)="toggle()">
+    <eds-icon *ngIf="icon" [icon]="icon"></eds-icon>
+    <ng-content *ngIf="!icon && (!multiLabel || multiChecked < 1)" select="eds-dropdown-trigger"></ng-content>
+    <span *ngIf="multiChecked > 0">{{multiLabel}} ({{multiChecked}})</span>
+  </button>
+  <eds-dropdown-menu [opened]="opened">
+    <ng-content></ng-content>
+  </eds-dropdown-menu>
+</div>

@@ -1,0 +1,13 @@
+<nav class="appbar">
+    <div class="actions-left">
+        <div class="item">
+            <i [ngClass]="{'navigation-toggle': true, closed: menuOpened}" (click)="toggleMenu()"></i>
+        </div>
+        <div [ngClass]="{'menu-anchor': true, 'open-menu': menuOpened}" (click)="toggleMenu()">{{ menuTitle }}</div>
+        <div [ngClass]="{title: true, 'open-menu': menuOpened}" (click)="toggleMenu()">
+            {{ title }}
+            <span class="subtitle">{{ subtitle }}</span>
+        </div>
+
+    </div>
+</nav>

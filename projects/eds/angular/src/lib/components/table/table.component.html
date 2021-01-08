@@ -1,0 +1,16 @@
+<table class="table sortable" [ngClass]="modes">
+  <thead *ngIf="columns">
+    <tr>
+      <th *ngFor="let col of columns">
+        {{col.DisplayName}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let cell of columns">
+        {{row[cell.ColumnName]}}
+      </td>
+    </tr>
+  </tbody>
+</table>

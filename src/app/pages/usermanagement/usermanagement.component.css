@@ -1,0 +1,10 @@
+.light .tree .title:not(.opened)::before {
+  content: "\e922";
+}
+
+.light .tree ::before {
+  /* font-size: 14px; */
+  font-family: "Ericsson Icons" !important;
+  vertical-align: middle;
+  text-align: center;
+}

@@ -1,0 +1,70 @@
+
+<button id="openGroup" class="btn primary" (click)="showGroup()"><i class="icon icon-plus"></i>Add groups</button> 
+<!--<ag-grid-angular #agGrid
+                 style="width: 100%; height: 100%;"
+                 id="myGrid"
+                 class="ag-theme-alpine"
+                 [columnDefs]="columnDefs"
+                 [defaultColDef]="defaultColDef"
+                 [suppressRowClickSelection]="true"
+                 [groupSelectsChildren]="true"
+                 [debug]="true"
+                 [rowSelection]="rowSelection"
+                 [rowGroupPanelShow]="rowGroupPanelShow"
+                 [pivotPanelShow]="pivotPanelShow"
+                 [enableRangeSelection]="true"
+                 [pagination]="true"
+                 [paginationPageSize]="paginationPageSize"
+                 [paginationNumberFormatter]="paginationNumberFormatter"
+                 [rowData]="rowData"
+                 [suppressRowTransform]="true"
+                 [frameworkComponents]="frameworkComponents"
+                 (paginationChanged)="onPaginationChanged($event)"
+                 (sortChanged)="onSortChanged($event)"
+                 
+                 (gridReady)="onGridReady($event)"></ag-grid-angular>-->
+<form #addGroup="ngForm" name="addGroup">
+  <eds-dialog id="AddPATDialog" #addDialog [isOpened]="openAddDialog" mode="fullscreen">
+    <eds-dialog-title>
+      <div class="top">
+        <div class="title">Add Group</div>
+      </div>
+      <!--<div>Add Group</div>-->
+
+
+    </eds-dialog-title>
+    <eds-dialog-content>
+      <div style="width: 820px;height: 360px;overflow-y: auto;" #patDialogSrollTop>
+        <div class="form-group col-md-6">
+          <label id="newonboardingbox" class="" style="white-space: nowrap">Group:<span style="color: red;">*</span></label>
+
+          <input id="newonboardingbox" name="newonboardingbox" type="text" class="form-control txtbox" required [(ngModel)]="group.name">
+
+        </div>
+        <div class="form-group col-md-6">
+          <label id="newonboardingbox:j_idt56" class="ui-outputlabel ui-widget" style="white-space: nowrap;">Region:<span style="color: red;">*</span></label>
+
+          <ng-multiselect-dropdown [placeholder]="'Select Country'" [data]="countries" name="countrySelect"
+                                   [settings]="dropdownCountrySettings" [required]='requiredField' (onSelect)="onItemSelect($event)" [(ngModel)]="group.selectedItems">
+          </ng-multiselect-dropdown>
+        </div>
+        <div class="form-group col-md-12">
+          <dual-list [source]="source" [(destination)]="target" [filter]="true"></dual-list>
+        </div>
+
+
+
+
+      </div>
+    </eds-dialog-content>
+    <eds-dialog-actions>
+
+      <div class="bottom" style="margin-top: 9px;">
+        <button class="btn ghost" data-close="true" (click)="closeGroup()">Cancel</button>
+        <button class="btn primary" [disabled]="addGroup.invalid || !requiredField">Submit</button>
+      </div>
+      
+    </eds-dialog-actions>
+  </eds-dialog>
+
+</form>

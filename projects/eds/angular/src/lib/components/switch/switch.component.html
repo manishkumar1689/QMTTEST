@@ -1,0 +1,12 @@
+<label class="switch">
+  <input 
+    type="checkbox"
+    [checked]="value" 
+    [disabled]="isDisabled"
+    (change)="switch($event)">
+  <i class="ball"></i>
+  <span>
+    <ng-content *ngIf="value" select="eds-switch-on"></ng-content>
+    <ng-content *ngIf="!value" select="eds-switch-off"></ng-content>
+  </span>
+</label>

@@ -1,0 +1,53 @@
+image: gitlab.seld.rnd.ericsson.se:4567/eds/eds:latest
+
+before_script:
+  - node -v
+  - npm -v
+  - git config --global user.email "gitlab.ci@ericsson.com" && git config --global user.name "Gitlab CI"
+  - git remote set-url origin https://User:$CI_PUSH_TOKEN@gitlab.seld.rnd.ericsson.se/eds/eds-angular.git
+  - git config --global push.default matching
+
+stages:
+  - prep
+  - build
+  - publish
+
+prep:
+  stage: prep
+  script:
+    - npm install
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - node_modules
+  cache:
+    paths:
+      - node_modules
+
+build:
+  stage: build
+  script:
+    - npm run build
+
+publish:prerelease:
+  stage: publish
+  script:
+    - git checkout $CI_COMMIT_REF_NAME
+    - npm run release:pre
+    - git push --follow-tags
+    - npm run publish-bundle:prerelease
+  only:
+    - develop@eds/eds-angular
+
+publish:release:
+  stage: publish
+  script:
+    - git checkout $CI_COMMIT_REF_NAME
+    - npm run release
+    - git push --follow-tags
+    - git checkout develop
+    - git merge master
+    - git push origin develop
+    - npm run publish-bundle
+  only:
+    - master@eds/eds-angular

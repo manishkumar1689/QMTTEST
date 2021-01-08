@@ -1,0 +1,20 @@
+.record-picker {
+  border: 1px solid black;
+}
+
+:host ::ng-deep .record-picker {
+  border: 1px solid #c8c8c8;
+}
+
+:host ::ng-deep .filter input {
+  width: 100% !important;
+}
+
+:host ::ng-deep  .btn.btn-primary {
+  color: #ffffff !important;
+  background-color: #0082f0 !important;
+  border: 1px solid #0082f0 !important;
+}
+input{
+    width:100%;
+}

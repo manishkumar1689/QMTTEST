@@ -1,0 +1,10 @@
+<input
+  type="checkbox"
+  [id]="inputId"
+  [checked]="value"
+  [disabled]="isDisabled"
+  [indeterminate]="isIndeterminate"
+  (change)="toggle($event)">
+<label [attr.for]="inputId">
+  <ng-content></ng-content>
+</label>

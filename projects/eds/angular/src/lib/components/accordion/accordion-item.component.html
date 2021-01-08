@@ -1,0 +1,8 @@
+<li [ngClass]="{'opened': isOpened}">
+  <div class="title" (click)="toggle()">
+    <ng-content select="eds-accordion-item-title"></ng-content>
+  </div>
+  <div class="content">
+    <ng-content select="eds-accordion-item-content"></ng-content>
+  </div>
+</li>

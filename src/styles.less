@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+@import 'assets/eds.less';
+@import "@eds/vanilla/common/styles";
+
+@import "@eds/vanilla/notification/styles";
+
+@import "bootstrap/dist/css/bootstrap.css";
+
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+.show-cell {
+  background: white;
+  border-left: 1px solid lightgrey !important;
+  border-right: 1px solid lightgrey !important;
+  border-bottom: 1px solid lightgrey !important;
+}
+
+.show-name {
+  font-weight: bold;
+}
+
+.show-presenter {
+  font-style: italic;
+}
+.cell-span {
+  background-color: #00e5ff;
+}
+.ag-cell-value {
+  overflow: inherit !important;
+  width: 100%;
+}
+.ag-theme-alpine .ag-cell{
+    line-height:30px !important;
+}

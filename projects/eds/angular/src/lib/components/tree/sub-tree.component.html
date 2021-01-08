@@ -1,0 +1,8 @@
+<li>
+  <span class="title item" [ngClass]="{'opened': isOpened, 'active': isActive()}" (click)="toggle()">
+    <ng-content select="eds-sub-tree-title"></ng-content>
+  </span>
+  <ul>
+    <ng-content></ng-content>
+  </ul>
+</li>

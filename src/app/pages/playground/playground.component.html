@@ -1,0 +1,760 @@
+<!--<div class="row">
+
+  <div eds-tile class="xl-4 lg-6">
+    <eds-tile-title>Button</eds-tile-title>
+    <eds-tile-subtitle>Example</eds-tile-subtitle>
+    <div class="row">
+      <div class="column xl-12">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <button eds-button>Default button</button>
+          <button eds-button disabled>Default button</button>
+        </div>
+        <div class="section no-padding-top">Primary</div>
+        <div class="example">
+          <button eds-button color="primary">Primary button</button>
+          <button eds-button color="primary" disabled>Primary button</button>
+        </div>
+        <div class="section no-padding-top">Warning</div>
+        <div class="example">
+          <button eds-button color="warning">Warning button</button>
+          <button eds-button color="warning" disabled>Warning button</button>
+        </div>
+        <div class="section no-padding-top">Link button</div>
+        <div class="example">
+          <a eds-button>Link button</a>
+          <a eds-button color="primary">Link button</a>
+        </div>
+        <div class="section no-padding-top">With icon</div>
+        <div class="example">
+          <button eds-button icon="settings">Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div eds-tile class="xl-3 lg-6">
+    <eds-tile-title>Checkbox</eds-tile-title>
+    <div class="row">
+      <div class="column sm-12 xl-8">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-checkbox [(ngModel)]="checkboxDemo">Label 1</eds-checkbox>
+          <eds-checkbox [(ngModel)]="checkboxDemo1">Label 2</eds-checkbox>
+        </div>
+        <div class="section no-padding-top">Disabled</div>
+        <div class="example">
+          <eds-checkbox [(ngModel)]="checkboxDemo2" [isDisabled]="true">Label 1</eds-checkbox>
+          <eds-checkbox [(ngModel)]="checkboxDemo3" [isDisabled]="true">Label 2</eds-checkbox>
+        </div>
+        <div class="section no-padding-top">Indeterminate</div>
+        <div class="example">
+          <eds-checkbox [(ngModel)]="checkboxDemo4" [isIndeterminate]="true">Label 1</eds-checkbox>
+          <eds-checkbox [(ngModel)]="checkboxDemo5" [isIndeterminate]="true" [isDisabled]="true">Label 2
+          </eds-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div eds-tile class="xl-5 lg-12">
+    <eds-tile-title>Tooltip</eds-tile-title>
+    <div class="row">
+      <div class="column sm-12 xl-8">
+        <div class="section no-padding-top">Positions</div>
+        <div class="example">
+
+          <p>
+            An example of a phrase with a
+            <span eds-tooltip position="top" message="Tooltip on the top, with a very long message.">
+              tooltip
+            </span>
+            on the top.
+          </p>
+
+          <p>
+            An example of a phrase with a
+            <span eds-tooltip position="top-end" message="Tooltip on the top-end.">
+              tooltip
+            </span>
+            on the top-end.
+          </p>
+
+          <p>
+            An example of a phrase with a
+            <span eds-tooltip position="right" message="Tooltip on the right.">
+              tooltip
+            </span>
+            on the right.
+          </p>
+
+          <p>
+            An example of a phrase with a
+            <span eds-tooltip position="left" message="Tooltip on the left.">
+              tooltip
+            </span>
+            on the left.
+          </p>
+
+          <p>
+            An example of a phrase with a
+            <span eds-tooltip position="bottom" message="Tooltip on the bottom.">
+              tooltip
+            </span>
+            on the bottom.
+          </p>
+
+          <p>
+            An example of a phrase with a
+            <span eds-tooltip position="bottom-end" message="Tooltip on the bottom-end.">
+              tooltip
+            </span>
+            on the bottom-end.
+          </p>
+
+        </div>
+        <div class="section no-padding-top">Colors</div>
+        <div class="example">
+
+          <p>
+            Tooltips can also have different
+            <span eds-tooltip position="right" message="Default background (theme dependant)">
+              colors
+            </span>
+          </p>
+
+          <p>
+            Tooltips can also have different
+            <span eds-tooltip position="right" color="blue" message="Blue background">
+              colors
+            </span>
+          </p>
+
+          <p>
+            Tooltips can also have different
+            <span eds-tooltip position="right" color="white" message="Light background">
+              colors
+            </span>
+          </p>
+
+          <p>
+            Tooltips can also have different
+            <span eds-tooltip position="right" color="black" message="Dark background">
+              colors
+            </span>
+          </p>
+
+        </div>
+        <div class="example">
+
+          <p>
+            Tooltips can be also placed on icons
+            <span eds-tooltip position="right" message="Refresh this page manually." icon="reload"></span>
+          </p>
+
+          <p>
+            Tooltips can also be shown
+            <span eds-tooltip position="bottom" message="Useful on mobile if needed." visibility="visible">
+              all the time.
+            </span>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div eds-tile class="xl-6">
+    <eds-tile-title>Accordion</eds-tile-title>
+    <div class="row">
+      <div class="column xl-12">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-accordion>
+            <eds-accordion-item>
+              <eds-accordion-item-title>
+                Item title 1
+              </eds-accordion-item-title>
+              <eds-accordion-item-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </eds-accordion-item-content>
+            </eds-accordion-item>
+            <eds-accordion-item [isOpened]="true">
+              <eds-accordion-item-title>
+                Item title 2
+              </eds-accordion-item-title>
+              <eds-accordion-item-content>
+                <p>Accordion content goes here. It will expand the height of accordion bar and pushes down
+                  the items below.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  ut.
+                </p>
+              </eds-accordion-item-content>
+            </eds-accordion-item>
+            <eds-accordion-item>
+              <eds-accordion-item-title>
+                Item title 3
+              </eds-accordion-item-title>
+              <eds-accordion-item-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </eds-accordion-item-content>
+            </eds-accordion-item>
+          </eds-accordion>
+        </div>
+        <div class="section no-padding-top">Lines</div>
+        <div class="example">
+          <eds-accordion mode="lines">
+            <eds-accordion-item>
+              <eds-accordion-item-title>
+                Item title 1
+              </eds-accordion-item-title>
+              <eds-accordion-item-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </eds-accordion-item-content>
+            </eds-accordion-item>
+            <eds-accordion-item [isOpened]="true">
+              <eds-accordion-item-title>
+                Item title 2
+              </eds-accordion-item-title>
+              <eds-accordion-item-content>
+                <p>Accordion content goes here. It will expand the height of accordion bar and pushes down
+                  the items below.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  ut.
+                </p>
+              </eds-accordion-item-content>
+            </eds-accordion-item>
+            <eds-accordion-item>
+              <eds-accordion-item-title>
+                Item title 3
+              </eds-accordion-item-title>
+              <eds-accordion-item-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </eds-accordion-item-content>
+            </eds-accordion-item>
+            <eds-accordion-item>
+              <eds-accordion-item-title>
+                Item title 4
+              </eds-accordion-item-title>
+              <eds-accordion-item-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </eds-accordion-item-content>
+            </eds-accordion-item>
+          </eds-accordion>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div eds-tile class="xl-3 lg-6">
+    <eds-tile-title>Switch</eds-tile-title>
+    <div class="row">
+      <div class="column sm-12 xl-8">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-switch [(ngModel)]="switchDemo">
+            <eds-switch-on>On</eds-switch-on>
+            <eds-switch-off>Off</eds-switch-off>
+          </eds-switch>
+        </div>
+        <div class="section no-padding-top">Disabled</div>
+        <div class="example">
+          <eds-switch [(ngModel)]="switchDemo1" [isDisabled]="true">
+            <eds-switch-on>On</eds-switch-on>
+            <eds-switch-off>Off</eds-switch-off>
+          </eds-switch>
+          <br>
+          <br>
+          <eds-switch [(ngModel)]="switchDemo2" [isDisabled]="true">
+            <eds-switch-on>On</eds-switch-on>
+            <eds-switch-off>Off</eds-switch-off>
+          </eds-switch>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div eds-tile class="xl-3 lg-6">
+    <eds-tile-title>Tree</eds-tile-title>
+    <div class="row">
+      <div class="column sm-12 xl-8">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-tree>
+            <eds-tree-item>Item title 1</eds-tree-item>
+            <eds-tree-item>Item title 2</eds-tree-item>
+            <eds-sub-tree [isOpened]="true">
+              <eds-sub-tree-title>Item title 3</eds-sub-tree-title>
+              <eds-tree-item>Child title 3.1</eds-tree-item>
+              <eds-tree-item>Child title 3.2</eds-tree-item>
+              <eds-tree-item>Child title 3.3</eds-tree-item>
+            </eds-sub-tree>
+          </eds-tree>
+        </div>
+        <div class="section no-padding-top">Nested</div>
+        <div class="example">
+          <eds-tree>
+            <eds-tree-item>Item title 1</eds-tree-item>
+            <eds-tree-item>Item title 2</eds-tree-item>
+            <eds-sub-tree [isOpened]="true">
+              <eds-sub-tree-title>Item title 3</eds-sub-tree-title>
+              <eds-tree-item>Child title 3.1</eds-tree-item>
+              <eds-tree-item>Child title 3.2</eds-tree-item>
+              <eds-tree-item>Child title 3.3</eds-tree-item>
+            </eds-sub-tree>
+            <eds-sub-tree>
+              <eds-sub-tree-title>Item title 4</eds-sub-tree-title>
+              <eds-tree-item>Child title 4.1</eds-tree-item>
+            </eds-sub-tree>
+            <eds-tree-item>Item title 5</eds-tree-item>
+            <eds-tree-item>Item title 6</eds-tree-item>
+            <eds-sub-tree>
+              <eds-sub-tree-title>Item title 7</eds-sub-tree-title>
+              <eds-tree-item>Child title 7.1</eds-tree-item>
+              <eds-tree-item>Child title 7.2</eds-tree-item>
+            </eds-sub-tree>
+            <eds-tree-item>Item title 8</eds-tree-item>
+          </eds-tree>
+        </div>
+        <div class="section no-padding-top">Tree with checkboxes</div>
+        <div class="example">
+          <eds-tree>
+            <eds-tree-item>
+              <eds-checkbox [(ngModel)]="treeCheckbox">Item title 1</eds-checkbox>
+            </eds-tree-item>
+            <eds-sub-tree>
+              <eds-sub-tree-title>
+                <eds-checkbox [(ngModel)]="treeCheckbox1">Item title 2</eds-checkbox>
+              </eds-sub-tree-title>
+              <eds-tree-item>
+                <eds-checkbox [(ngModel)]="treeCheckbox2">Child title 2.1</eds-checkbox>
+              </eds-tree-item>
+              <eds-tree-item>
+                <eds-checkbox [(ngModel)]="treeCheckbox3">Child title 2.2</eds-checkbox>
+              </eds-tree-item>
+              <eds-tree-item>
+                <eds-checkbox [(ngModel)]="treeCheckbox4">Child title 2.3</eds-checkbox>
+              </eds-tree-item>
+            </eds-sub-tree>
+            <eds-tree-item>
+              <eds-checkbox [(ngModel)]="treeCheckbox5">Item title 3</eds-checkbox>
+            </eds-tree-item>
+          </eds-tree>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div eds-tile class="xl-7">
+    <eds-tile-title>Syntax highlight</eds-tile-title>
+    <div class="row">
+      <div class="column xl-12">
+        <div class="section no-padding-top">HTML</div>
+        <div class="example">
+          <eds-syntax-highlight [code]="htmlCode"></eds-syntax-highlight>
+          <br>
+          <eds-syntax-highlight [code]="htmlCode" [showLineNumbers]="true"></eds-syntax-highlight>
+        </div>
+        <div class="section no-padding-top">CSS</div>
+        <div class="example">
+          <eds-syntax-highlight [code]="cssCode" language="css"></eds-syntax-highlight>
+          <br>
+          <eds-syntax-highlight [code]="cssCode" language="css" [showLineNumbers]="true"></eds-syntax-highlight>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div eds-tile class="xl-3 lg-6">
+    <eds-tile-title>Input</eds-tile-title>
+    <div class="row">
+      <div class="column sm-12 xl-8">
+        <div class="section no-padding-top">Text</div>
+        <div class="example">
+          <input eds-input placeholder="Hello world">
+        </div>
+        <div class="section no-padding-top">Number</div>
+        <label class="example">
+          <input eds-input type="number">
+        </label>
+        <div class="section no-padding-top">Textarea</div>
+        <label class="example">
+          <textarea eds-input></textarea>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div eds-tile class="xl-2 lg-6">
+    <eds-tile-title>Icon</eds-tile-title>
+    <div class="row">
+      <div class="column sm-12 xl-8">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-icon icon="econ"></eds-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div eds-tile class="xl-5">
+    <eds-tile-title>Notification</eds-tile-title>
+    <div class="row">
+      <div class="column sm-12 xl-8">
+        <div class="section no-padding-top">Dynamic example</div>
+        <div class="example">
+          <button eds-button (click)="fireNotification()">Fire live notification</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div eds-tile class="xl-4">
+    <eds-tile-title>Dialog</eds-tile-title>
+    <div class="row">
+      <div class="column sm-12 xl-8">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <button eds-button (click)="toggleSmallDialog()">Open small dialog</button>
+          <eds-dialog [isOpened]="smallDialogOpened" (change)="toggleSmallDialog($event)">
+            <eds-dialog-title>Subscribe</eds-dialog-title>
+            <eds-dialog-content>
+              <p>Share your email to keep updated with the latest news.</p>
+              <input type="text" class="fullwidth" placeholder="example@email.com">
+              <div class="suffix icon-inside">
+                <i class="icon icon-email"></i>
+              </div>
+            </eds-dialog-content>
+            <eds-dialog-actions>
+              <button eds-button (click)="toggleSmallDialog()">Cancel</button>
+              <button eds-button color="primary">Submit</button>
+            </eds-dialog-actions>
+          </eds-dialog>
+        </div>
+        <div class="section no-padding-top">Fullscreen</div>
+        <div class="example">
+          <button eds-button (click)="toggleFullscreenDialog()">Open fullscreen dialog</button>
+          <eds-dialog [isOpened]="fullscreenDialogOpened" (change)="toggleFullscreenDialog($event)" mode="fullscreen">
+            <eds-dialog-title>Interactive Map Example</eds-dialog-title>
+            <eds-dialog-content>
+              <div style="width: 100vw; height: 100vh;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2969.0!2d18.0686!3d59.3293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sExample%2C+Map!5e0!3m2!1sen!2sus!4v1390839289319"
+                  width="100%" height="100%" frameborder="0" style="border:0;"></iframe>
+              </div>
+            </eds-dialog-content>
+          </eds-dialog>
+        </div>
+        <div class="section no-padding-top">Warning</div>
+        <div class="example">
+          <button eds-button (click)="toggleWarningDialog()">Open warning dialog</button>
+          <eds-dialog [isOpened]="warningDialogOpened" (change)="toggleWarningDialog($event)">
+            <eds-dialog-title>Leave without saving?</eds-dialog-title>
+            <eds-dialog-content>
+              <p>All changes will be lost.</p>
+              <p>Are you sure you want leave the current page without saving? </p>
+            </eds-dialog-content>
+            <eds-dialog-actions>
+              <button eds-button color="warning">Leave without saving</button>
+              <button eds-button (click)="toggleWarningDialog()">Cancel</button>
+            </eds-dialog-actions>
+          </eds-dialog>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div eds-tile class="xl-3">
+    <eds-tile-title>Progress bar</eds-tile-title>
+    <div class="row">
+      <div class="column xl-12">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-progress-bar [value]="65"></eds-progress-bar>
+        </div>
+        <div class="section no-padding-top">With label</div>
+        <div class="example">
+          <eds-progress-bar [value]="33" label="Label"></eds-progress-bar>
+        </div>
+        <div class="section no-padding-top">Indeterminate</div>
+        <div class="example">
+          <eds-progress-bar></eds-progress-bar>
+        </div>
+        <div class="section no-padding-top">Buffer</div>
+        <div class="example">
+          <eds-progress-bar [value]="45" [buffer]="65"></eds-progress-bar>
+          <eds-progress-bar [value]="65" [buffer]="5"></eds-progress-bar>
+        </div>
+        <div class="section no-padding-top">Color variations</div>
+        <div class="example">
+          <eds-progress-bar [value]="33" color="blue"></eds-progress-bar>
+          <eds-progress-bar [value]="65" color="red"></eds-progress-bar>
+        </div>
+        <div class="section no-padding-top">Thin</div>
+        <div class="example">
+          <eds-progress-bar [value]="87" mode="thin"></eds-progress-bar>
+          <eds-progress-bar [value]="43" mode="thin" color="red"></eds-progress-bar>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div eds-tile class="xl-12">
+    <eds-tile-title>Gauge</eds-tile-title>
+    <div class="row">
+      <div class="column xl-3">
+        <div class="section no-padding-top">Decimals</div>
+        <div class="example">
+          <eds-gauge [settings]="gauge1"></eds-gauge>
+          <button eds-button (click)="randomGaugeValue(1)">Set random value</button>
+        </div>
+      </div>
+      <div class="column xl-3">
+        <div class="section no-padding-top">Limits</div>
+        <div class="example">
+          <eds-gauge [settings]="gauge2"></eds-gauge>
+          <button eds-button (click)="randomGaugeValue(2)">Set random value</button>
+        </div>
+      </div>
+      <div class="column xl-3">
+        <div class="section no-padding-top">Limits mixed</div>
+        <div class="example">
+          <eds-gauge [settings]="gauge3"></eds-gauge>
+          <button eds-button (click)="randomGaugeValue(3)">Set random value</button>
+        </div>
+      </div>
+      <div class="column xl-3">
+        <div class="section no-padding-top">Negative values</div>
+        <div class="example">
+          <eds-gauge [settings]="gauge4"></eds-gauge>
+          <button eds-button (click)="randomGaugeValue(4)">Set random value</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column xl-4">
+        <div class="section no-padding-top">Small</div>
+        <div class="example">
+          <eds-gauge [settings]="gauge5"></eds-gauge>
+          <button eds-button (click)="randomGaugeValue(5)">Set random value</button>
+        </div>
+      </div>
+      <div class="column xl-4">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-gauge [settings]="gauge0"></eds-gauge>
+          <button eds-button (click)="randomGaugeValue(0)">Set random value</button>
+        </div>
+      </div>
+      <div class="column xl-4">
+        <div class="section no-padding-top">Large</div>
+        <div class="example">
+          <eds-gauge [settings]="gauge6"></eds-gauge>
+          <button eds-button (click)="randomGaugeValue(6)">Set random value</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div eds-tile class="xl-3">
+    <eds-tile-title>Dropdown</eds-tile-title>
+    <eds-tile-actions>
+      <div class="action">
+        <eds-dropdown icon="more">
+          <div eds-dropdown-item>Action 1</div>
+          <div eds-dropdown-item>Action 2</div>
+        </eds-dropdown>
+      </div>
+    </eds-tile-actions>
+    <div class="row">
+      <div class="column xl-12">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-dropdown>
+            <eds-dropdown-trigger>More actions...</eds-dropdown-trigger>
+            <div eds-dropdown-item>Action 1</div>
+            <div eds-dropdown-item>Action 2</div>
+          </eds-dropdown>
+        </div>
+        <div class="section no-padding-top">Menu</div>
+        <div class="example">
+          <eds-dropdown-menu>
+            <div eds-dropdown-item>Action 1</div>
+            <div eds-dropdown-item>Action 2</div>
+          </eds-dropdown-menu>
+        </div>
+        <div class="section no-padding-top">Single select</div>
+        <div class="example">
+          <eds-dropdown>
+            <eds-dropdown-trigger>{{dropdownRadioExample}}</eds-dropdown-trigger>
+            <eds-radio-group [(ngModel)]="dropdownRadioExample">
+              <eds-radio-button eds-dropdown-item [value]="'Product 1'">Product 1</eds-radio-button>
+              <eds-radio-button eds-dropdown-item [value]="'Product 2'">Product 2</eds-radio-button>
+            </eds-radio-group>
+          </eds-dropdown>
+        </div>
+        <div class="section no-padding-top">Multi select</div>
+        <div class="example">
+          <eds-dropdown [multiLabel]="'Options'">
+            <eds-dropdown-trigger>Select Option</eds-dropdown-trigger>
+            <eds-checkbox eds-dropdown-item [(ngModel)]="dropdownMulti1">Option 1</eds-checkbox>
+            <eds-checkbox eds-dropdown-item [(ngModel)]="dropdownMulti2">Option 2</eds-checkbox>
+          </eds-dropdown>
+        </div>
+        <div class="section no-padding-top">Icon</div>
+        <div class="example">
+          <eds-dropdown icon="more">
+            <div eds-dropdown-item>Action 1</div>
+            <div eds-dropdown-item>Action 2</div>
+          </eds-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div eds-tile class="xl-3">
+    <eds-tile-title>Radio</eds-tile-title>
+    <div class="row">
+      <div class="column xl-12">
+        <div class="section no-padding-top">Default (Selected: {{radioModel}})</div>
+        <div class="example">
+          <eds-radio-group [(ngModel)]="radioModel">
+            <eds-radio-button [value]="'Label 1'" [isChecked]="true">Label 1</eds-radio-button>
+            <eds-radio-button [value]="'Label 2'">Label 2</eds-radio-button>
+            <eds-radio-button [value]="'Label 3'">Label 3</eds-radio-button>
+          </eds-radio-group>
+        </div>
+        <div class="section no-padding-top">Disabled</div>
+        <div class="example">
+          <eds-radio-group [(ngModel)]="radioModel1">
+            <eds-radio-button [value]="'Label 1'" [isChecked]="true" [isDisabled]="true">Label 1
+            </eds-radio-button>
+            <eds-radio-button [value]="'Label 2'" [isDisabled]="true">Label 2</eds-radio-button>
+            <eds-radio-button [value]="'Label 3'" [isDisabled]="true">Label 3</eds-radio-button>
+          </eds-radio-group>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div eds-tile class="xl-6">
+    <eds-tile-title>Tabs</eds-tile-title>
+    <div class="row">
+      <div class="column xl-12">
+        <div class="section no-padding-top">Default</div>
+        <div class="example">
+          <eds-tabs>
+            <eds-tab label="Tab 1">
+              <p>Content for Tab 1</p>
+            </eds-tab>
+            <eds-tab label="Tab 2" selected>
+              <p>Content for Tab 2</p>
+            </eds-tab>
+            <eds-tab label="Tab 3">
+              <p>Content for Tab 3</p>
+            </eds-tab>
+          </eds-tabs>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div eds-tile class="xl-12">
+    <eds-tile-title>Table</eds-tile-title>
+    <div class="row">
+      <div class="column xl-12">
+        <div class="section no-padding-top">Simple</div>
+        <div class="example">
+          <eds-table [columns]="dummyTableColumns" [data]="dummyTableData"></eds-table>
+        </div>
+        <div class="section no-padding-top">Compact</div>
+        <div class="example">
+          <eds-table [columns]="dummyTableColumns" [data]="dummyTableData" [modes]="['compact']"></eds-table>
+        </div>
+        <div class="section no-padding-top">Tiny</div>
+        <div class="example">
+          <eds-table [columns]="dummyTableColumns" [data]="dummyTableData" [modes]="['tiny']"></eds-table>
+        </div>
+        <div class="section no-padding-top">Dashed</div>
+        <div class="example">
+          <eds-table [columns]="dummyTableColumns" [data]="dummyTableData" [modes]="['dashed']"></eds-table>
+        </div>
+        <div class="section no-padding-top">Striped</div>
+        <div class="example">
+          <eds-table [columns]="dummyTableColumns" [data]="dummyTableData" [modes]="['striped']"></eds-table>
+        </div>
+        <div class="section no-padding-top">No column titles</div>
+        <div class="example">
+          <eds-table [data]="dummyTableData" [modes]="['tiny', 'dashed']"></eds-table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div eds-tile class="xl-12">
+    <eds-tile-title>Date fields</eds-tile-title>
+    <eds-tile-subtitle>Input and inline</eds-tile-subtitle>
+    <div class="row">
+      <div class="column xl-6">
+        <div class="section no-padding-top">Datepicker</div>
+        <div class="example">
+          <eds-datepicker></eds-datepicker>
+        </div>
+      </div>
+      <div class="column xl-6">
+        <div class="section no-padding-top">Calendar</div>
+        <div class="example">
+          <eds-calendar></eds-calendar>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>-->

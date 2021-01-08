@@ -1,0 +1,12 @@
+{
+  "name": "@eds/angular",
+  "version": "0.10.0-1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "@eds/vanilla": "latest"
+  },
+  "publishConfig": {
+    "registry": "https://arm.rnd.ki.sw.ericsson.se/artifactory/api/npm/proj-eds-npm-local/"
+  }
+}

@@ -1,0 +1,14 @@
+@import (reference) "@eds/vanilla/variables/global";
+@import "@eds/vanilla/tab/styles";
+
+// TODO: Specific for Angular version due to <ng-content> selector messing with CSS > selector (from vanilla)
+eds-tab {
+  .content {
+    display: none;
+    margin-top: @space-base;
+
+    &.selected {
+      display: block;
+    }
+  }
+}

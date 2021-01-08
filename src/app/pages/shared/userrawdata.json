@@ -1,0 +1,81 @@
+[
+  {
+    "user": "test1",
+    "signum": "ekknma1",
+    "email": "Test1@gmail.com",
+    "associatedGroups": "United States1"
+
+  },
+  {
+    "user": "test2",
+    "signum": "ekknma2",
+    "email": "Test2@gmail.com",
+    "associatedGroups": "United States2"
+
+  },
+  {
+    "user": "test3",
+    "signum": "ekknma3",
+    "email": "Test3@gmail.com",
+    "associatedGroups": "United States3"
+
+  },
+  {
+    "user": "test4",
+    "signum": "ekknma4",
+    "email": "Test4@gmail.com",
+    "associatedGroups": "United States4"
+
+
+  },
+  {
+    "user": "test5",
+    "signum": "ekknma5",
+    "email": "Test5@gmail.com",
+    "associatedGroups": "United States5"
+
+  },
+  {
+    "user": "test6",
+    "signum": "ekknma6",
+    "email": "Test6@gmail.com",
+    "associatedGroups": "United States6"
+
+  },
+  {
+    "user": "test7",
+    "signum": "ekknma7",
+    "email": "Test7@gmail.com",
+    "associatedGroups": "United States7"
+
+  },
+  {
+    "user": "test8",
+    "signum": "ekknma8",
+    "email": "Test8@gmail.com",
+    "associatedGroups": "United States8"
+
+  },
+  {
+    "user": "test9",
+    "signum": "ekknma9",
+    "email": "Test9@gmail.com",
+    "associatedGroups": "United States9"
+
+
+  },
+  {
+    "user": "test10",
+    "signum": "ekknma10",
+    "email": "Test@gmail.com10",
+    "associatedGroups": "United States10"
+
+  },
+  {
+    "user": "test11",
+    "signum": "ekknma11",
+    "email": "Test11@gmail.com",
+    "associatedGroups": "United States11"
+
+  }
+]

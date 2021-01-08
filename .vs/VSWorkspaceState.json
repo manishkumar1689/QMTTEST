@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\pages",
+    "\\src\\app\\pages\\Grouping",
+    "\\src\\app\\pages\\Grouping\\group-on-boarding",
+    "\\src\\app\\pages\\Grouping\\group-on-boarding\\group-on-boarding",
+    "\\src\\app\\pages\\Grouping\\project-on-boarding",
+    "\\src\\app\\pages\\Grouping\\project-on-boarding\\form",
+    "\\src\\app\\pages\\Grouping\\project-on-boarding\\form\\create-project",
+    "\\src\\app\\pages\\Grouping\\project-on-boarding\\project-on-boarding"
+  ],
+  "SelectedNode": "\\src\\app\\pages\\Grouping\\group-on-boarding\\group-on-boarding\\group-on-boarding.component.spec.ts",
+  "PreviewInSolutionExplorer": false
+}

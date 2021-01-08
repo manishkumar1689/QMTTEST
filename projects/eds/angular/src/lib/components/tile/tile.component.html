@@ -1,0 +1,25 @@
+<div class="header">
+  <div class="left">
+    <div class="title">
+      <ng-content select="eds-tile-title"></ng-content>
+    </div>
+    <div class="subtitle">
+      <ng-content select="eds-tile-subtitle"></ng-content>
+    </div>
+  </div>
+  <div class="right">
+    <!-- 
+      TODO: 
+      Maximize/minimize functionality has a bug in Vanilla JS styling
+      https://git.mt.rxn.us/ericsson-design-system/vanilla-components/tiles/issues/3
+
+    <div class="action">
+        <span eds-tooltip *ngIf="!isMaximized" color="blue" position="left" message="Maximize tile" icon="maximize" (click)="maximize()"></span>
+        <span eds-tooltip *ngIf="isMaximized" color="blue" position="left" message="Minimize tile" icon="minimize" (click)="minimize()"></span>
+    </div> -->
+    <ng-content select="eds-tile-actions"></ng-content>
+  </div>
+</div>
+<div class="content">
+  <ng-content></ng-content>
+</div>

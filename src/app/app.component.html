@@ -1,0 +1,74 @@
+<eds-system-bar (settingsHandler)="settingsHandler($event)">
+  <span eds-system-bar-items-headers>
+    |&nbsp;
+    <a [routerLink]="['/']"><i class="icon icon-home"></i></a>
+    |&nbsp;&nbsp;&nbsp;
+  </span>
+  <span eds-system-bar-items-headers>
+    |&nbsp;
+    <a [routerLink]="['/usermanagement']"><i class="icon icon-settings"></i></a>
+    |
+
+  </span>
+  <a eds-system-bar-items class="margin-right-100 cursor-pointer">Tableau Access Control</a>
+</eds-system-bar>
+<main>
+  <eds-settings [opened]="settingsOpened">
+    <div class="column sm-12 profile">
+      <i class="icon icon-profile"></i>
+      <div class="username">Username</div>
+    </div>
+    <div class="column sm-12 content">
+      <div class="row" style="text-align:center">
+        <div class="column sm-12">
+          <div class="title">My settings</div>
+        </div>
+        <div class="column sm-12">
+          <div class="title">Tableau Access Control</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="column sm-12 bottom">
+      <button eds-button class="big">
+        <i class="icon icon-log-out"></i> Sign out
+      </button>
+    </div>
+  </eds-settings>
+  
+  <div class="app" [ngClass]="{'slide-right': !settingsOpened, 'slide-left': settingsOpened}">
+    <!--<eds-app-bar [menuOpened]="menuOpened" (menuHandler)="menuHandler($event)"></eds-app-bar>-->
+
+    <eds-app-bar [menuOpened]="menuOpened" (menuHandler)="menuHandler($event)" *ngIf="isUserLoggedIn()"></eds-app-bar>
+
+    <div class="appbody pat-body">
+      <!--<div class="appnav" [ngClass]="{hidden: !menuOpened}">
+      <eds-tree mode="navigation">
+        <eds-tree-item route="/">Getting started</eds-tree-item>
+        <eds-sub-tree route="components">
+          <eds-sub-tree-title>Components</eds-sub-tree-title>
+          <eds-tree-item route="components/playground">Playground</eds-tree-item>
+        </eds-sub-tree>
+      </eds-tree>
+    </div>-->
+      <div class="appnav" [ngClass]="{hidden: !menuOpened}"
+           style="padding-right: 10px;">
+        <eds-tree mode="navigation">
+          <eds-tree-item route='/dashboard/projectOnBoarding'>Project OnBoarding</eds-tree-item>
+
+          <eds-tree-item route='/dashboard/groupOnBoarding'>Group OnBoarding</eds-tree-item>
+          <eds-sub-tree>
+            <eds-sub-tree-title>Security</eds-sub-tree-title>
+            <eds-tree-item route="/usermanagement/user">User</eds-tree-item>
+            <eds-tree-item route='/usermanagement/group'>Group</eds-tree-item>
+
+          </eds-sub-tree>
+        </eds-tree>
+      </div>
+      <div class="appcontent" style="margin-top:-10px">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</main>

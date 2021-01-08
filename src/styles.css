@@ -1,0 +1,304 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*@import 'assets/eds.less';*/
+.show-cell {
+  background: white;
+  border-left: 1px solid lightgrey !important;
+  border-right: 1px solid lightgrey !important;
+  border-bottom: 1px solid lightgrey !important;
+}
+
+.show-name {
+  font-weight: bold;
+}
+
+.show-presenter {
+  font-style: italic;
+}
+
+.cell-span {
+  background-color: #00e5ff;
+}
+
+.ag-row {
+height:25px!important;
+}
+
+/* You can add global styles to this file, and also import other style files */
+#AddDomain .content {
+  width: 400px !important;
+}
+
+
+.required:after {
+  content: " *";
+  color: red;
+}
+
+.exam {
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.modal-header {
+  padding: .2rem;
+}
+
+.modal-body {
+  height: 415px;
+  overflow-y: auto;
+}
+
+.modal-bodyDel {
+  height: 70px;
+  overflow-y: auto;
+}
+
+.txtbox {
+  height: 30px;
+  width: 320px;
+  padding: 2px;
+}
+
+
+
+
+
+select {
+  padding-left: 1px !important;
+}
+
+
+.custom {
+  width: 98px !important;
+}
+
+.custom-class {
+  height: 30px !important;
+  width: 100%;
+}
+
+.login-screen-bg {
+  background: #0c0c0c;
+}
+
+.pat-header-row {
+  height: 32px;
+  background-color: #f5f7f7 !important;
+  border-bottom-color: rgb(189, 195, 199) !important;
+  border-top-color: rgb(189, 195, 199) !important;
+  border-right-color: rgb(189, 195, 199) !important;
+  border-left-color: rgb(189, 195, 199) !important;
+  border-bottom-width: 1px !important;
+  border-top-width: 1px !important;
+  border-left-width: 1px !important;
+  border-right-width: 1px !important;
+}
+
+  .pat-header-row > th {
+    padding-top: 0px !important;
+    padding-bottom: 5px !important;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+    font-weight: 600 !important;
+    border-right: 1px solid rgb(189, 195, 199) !important;
+    border-left: 1px solid rgb(189, 195, 199) !important;
+    border-top: 1px solid rgb(189, 195, 199) !important;
+    border-bottom: 1px solid rgb(189, 195, 199) !important;
+  }
+
+.odd-body-row {
+  height: 32px;
+  background-color: #fcfdfe;
+  border-bottom-color: rgb(189, 195, 199);
+  border-top-color: rgb(189, 195, 199);
+  border-bottom-width: 1px;
+}
+
+  .odd-body-row > td {
+    padding-top: 7px !important;
+    padding-bottom: 5px !important;
+    color: #000000 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    opacity: 1 !important;
+    border-right: 1px solid rgb(189, 195, 199);
+    border-left: 1px solid rgb(189, 195, 199) !important;
+  }
+
+.even-body-row {
+  height: 32px;
+  background-color: white;
+  border-bottom-color: rgb(189, 195, 199);
+  border-top-color: rgb(189, 195, 199);
+  border-bottom-width: 1px;
+}
+
+  .even-body-row > td {
+    padding-top: 7px !important;
+    padding-bottom: 5px !important;
+    color: #000000 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    opacity: 1 !important;
+    border-right: 1px solid rgb(189, 195, 199);
+    border-left: 1px solid rgb(189, 195, 199) !important;
+  }
+
+.pat-body {
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 20px;
+}
+
+.aggridClass .switch {
+  width: 20px !important;
+  border-radius: 20px !important;
+}
+
+.aggridClass .ball {
+  left: 0 !important;
+  right: 4px !important;
+  height: 10px !important;
+  border-radius: 20px !important;
+}
+
+  .aggridClass .ball::before {
+    height: 5px !important;
+    width: 5px !important;
+    left: -6px !important;
+  }
+
+.aggridClass .inactive-switch::before {
+  left: 2px !important;
+}
+
+.btn-link:hover {
+  text-decoration: none !important;
+}
+
+.inactive-domain {
+  color: #949090;
+}
+
+.active-domain {
+  color: black;
+}
+
+.ag-paging-panel {
+  border-bottom: 1px solid rgb(189, 195, 199) !important;
+  border-left: 1px solid rgb(189, 195, 199) !important;
+  border-right: 1px solid rgb(189, 195, 199) !important;
+}
+
+/* Styling for uploader starts*/
+.drop-box {
+  cursor: pointer;
+  background: #F8F8F8;
+  border: 5px dashed #DDD;
+  text-align: center;
+  padding: 40px;
+}
+
+.drag-over-title {
+  display: none;
+}
+
+.drop-box.dragover {
+  opacity: 0.6;
+}
+
+  .drop-box.dragover .drag-over-title {
+    display: block;
+  }
+
+  .drop-box.dragover .drag-in-title {
+    display: none;
+  }
+
+input[type='file'] {
+  display: none;
+}
+
+.drop-box {
+  font-family: Ericsson Hilda Bold;
+  font-weight: normal;
+  font-size: 22px;
+  color: #fff;
+  background: #88b838;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 5px;
+}
+/* Styling for uploader ends*/
+
+.icon-edit {
+  vertical-align: top !important;
+}
+
+.word-break {
+  word-break: break-all;
+}
+
+.mop:hover {
+  color: grey
+}
+
+.mopd {
+  border: 1px #a9a9a9ad solid;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.refreshclass {
+  position: absolute;
+  left: 97%;
+  cursor: pointer;
+}
+
+  .refreshclass:hover {
+    color: blue;
+    transform: scale(1.2);
+  }
+
+.dosStyle {
+  width: 95% !important;
+  margin-left: 10px;
+}
+
+.dosButtonStyle {
+  margin-top: 1px;
+  border-radius: 18px;
+}
+
+.product {
+  cursor: default !important;
+}
+
+
+.icon {
+  font-family: "Ericsson Icons","Ericsson Hilda", Helvetica, Arial, sans-serif !important;
+  word-spacing: -4px;
+}
+
+.ag-column-drop-cell-button {
+  cursor: pointer !important;
+}
+
+.mailStyle {
+  height: 30px;
+  border-radius: .25rem;
+}
+
+/* .edgeStyle {
+ margin-top: -40px;
+ margin-left: 7px; 
+} */

@@ -1,0 +1,26 @@
+<header class="sysbar">
+  <div class="items-container" style="cursor: default;">
+    <div class="item" routerLink="/">
+      <i class="icon icon-econ"></i>
+      <span class="product"> {{title}}</span>&nbsp;&nbsp;
+     <!-- <span  style="font-size:smaller;float:right;padding-top:10px">
+        <a href="https://erilink.ericsson.se/eridoc/erl/objectId/09004cffc4667ab4?docno=BDGS-20:003893Uen&action=current&format=msw12" target="blank" style="color:white">
+            1.0&nbsp;
+            <i class="fa fa-book" ></i>
+        </a>
+    </span>-->
+      <span class="acronym">{{acronym}}</span>
+      <span class="sup" *ngIf="experimental">LAB</span>
+    </div>
+  </div>
+  <div class="items-container">
+    <ng-content select="eds-system-bar-items"></ng-content>
+
+    <div class="item hover" _ngcontent-c0="" title="Click to view user guide">
+      <a href="https://erilink.ericsson.se/eridoc/erl/objectId/09004cffc4d209e0?docno=1553-FCP1330791Uen&format=pdf" target="_blank" rel="noopener noreferrer" _ngcontent-c0="">v1.0</a></div>
+    <div class="item hover" *ngIf="username" (click)="toggleSettings()">
+      <i class="icon icon-profile"></i>
+      <span class="username"> {{username}}</span>
+    </div>
+  </div>
+</header>

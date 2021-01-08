@@ -1,0 +1,10 @@
+<input 
+    type="radio"
+    [attr.name]="radioGroup.groupName"
+    [id]="inputId" 
+    [checked]="isChecked"
+    [disabled]="isDisabled"
+    (change)="_onInputChange($event)">
+<label [attr.for]="inputId">
+    <ng-content></ng-content>
+</label>

@@ -1,0 +1,35 @@
+input[type="radio"] {
+    display:inline-block;
+  -webkit-appearance: radio;
+  opacity: 1;
+  position: relative;
+  margin-right:20px;
+  width:auto;
+}
+.record-picker {
+  border: 1px solid black;
+}
+:host ::ng-deep .record-picker {
+  border: 1px solid #c8c8c8;
+}
+:host ::ng-deep .filter input{
+  width: 100% !important;
+  
+}
+input{
+    width:100% !important;
+    background:white !important;
+}
+input[type="radio"]{
+  width: auto !important;
+}
+:host ::ng-deep .btn.btn-primary {
+  color: #ffffff !important;
+  background-color: #0082f0 !important;
+  border: 1px solid #0082f0 !important;
+}
+:host ::ng-deep .multiselect-dropdown
+{
+    background:white;
+}
+
